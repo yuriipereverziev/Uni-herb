@@ -1,0 +1,232 @@
+.no-webp .instruction {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../img/vegetables-bg.jpg");
+  background-position-x: -1000px;
+}
+
+.webp .instruction {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../img/vegetables-bg.webp");
+  background-position-x: -1000px;
+}
+
+.instruction__title {
+  max-width: 100%;
+}
+
+.instruction-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.instruction__img {
+  max-width: 150px;
+  margin: 0 auto 30px;
+}
+
+.instruction__product {
+  display: none;
+}
+
+.instruction__first {
+  margin-bottom: 30px;
+}
+
+.instruction__first__text, .instruction__second__text {
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+.instruction__first__circle,
+.instruction__second__circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 95px;
+  height: 95px;
+  background-color: $green;
+  border-radius: 50%;
+  margin: 0 auto 20px;
+}
+
+.instruction__second {
+  max-width: 245px;
+}
+
+.instruction__second__text,
+.instruction__first__text {
+  text-align: center;
+}
+
+
+@include rm(480) {
+  .instruction__img {
+    max-width: 180px;
+  }
+
+  .instruction-wrapper {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .instruction__first__circle,
+  .instruction__second__circle {
+    width: 119px;
+    height: 119px;
+  }
+}
+
+@include rm(768) {
+
+  .instruction__product {
+    position: relative;
+  }
+
+  .instruction__first,
+  .instruction__second {
+    padding-top: 30px;
+  }
+  .instruction__img {
+    display: none;
+  }
+
+  .instruction__product {
+    display: block;
+  }
+
+  .instruction__first__text,
+  .instruction__second__text {
+    font-size: 18px;
+  }
+
+  .instruction-wrapper {
+    align-items: flex-start;
+  }
+}
+
+
+@include rm(1024) {
+  .no-webp .instruction {
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-image: url("../img/vegetables-bg.jpg");
+    background-position: center;
+  }
+
+  .webp .instruction {
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-image: url("../img/vegetables-bg.webp");
+    background-position: center;
+  }
+
+  .no-webp .instruction__product::before {
+    position: absolute;
+    content: "";
+    bottom: -20%;
+    left: -90%;
+    width: 600px;
+    height: 200px;
+    background-image: url("../img/advantages-vegetables.png");
+  }
+
+  .webp .instruction__product::before {
+    position: absolute;
+    content: "";
+    bottom: -20%;
+    left: -90%;
+    width: 600px;
+    height: 200px;
+    background-image: url("../img/advantages-vegetables.webp");
+  }
+
+  .instruction__second,
+  .instruction__first {
+    position: relative;
+  }
+
+  .instruction__second::before,
+  .instruction__first::before {
+    position: absolute;
+    content: "";
+    width: 104px;
+    height: 2px;
+    background-color: $green;
+  }
+
+  .instruction__second::before {
+    left: -60px;
+    top: 90px;
+  }
+
+  .instruction__first::before {
+    right: -74px;
+    top: 90px;
+  }
+
+  .instruction__first::after,
+  .instruction__second::after {
+    position: absolute;
+    content: "";
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background-color: $green;
+  }
+
+  .instruction__second::after {
+    left: -60px;
+    top: 85px;
+  }
+
+  .instruction__first::after {
+    right: -75px;
+    top: 85px;
+  }
+}
+
+@include rm(1220) {
+
+  .instruction__first {
+    width: 360px;
+  }
+  .instruction__second {
+    max-width: 370px;
+  }
+
+  .instruction__title {
+    max-width: 862px;
+    margin: 0 auto 60px;
+  }
+
+  .instruction__first__text,
+  .instruction__second__text {
+    font-size: 20px;
+  }
+
+
+  .instruction__second::before {
+    left: -11px;
+    top: 90px;
+  }
+
+  .instruction__first::before {
+    right: -16px;
+    top: 90px;
+  }
+  .instruction__second::after {
+    left: -11px;
+    top: 85px;
+  }
+
+  .instruction__first::after {
+    right: -17px;
+    top: 85px;
+  }
+}
+
+
+

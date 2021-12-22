@@ -1,0 +1,60 @@
+.header {
+    display: none;
+}
+@include rm(1024) {
+    .header {
+        display: block;
+        padding: 15px 0;
+        & .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        &__list {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        &__logo {
+            margin-right: 30px;
+            width: 200px;
+        }
+        .list {
+            &__item {
+                display: flex;
+                align-items: center;
+                width: 25%;
+                &:not(:last-child) {
+                    margin-right: 15px;
+                }
+            }
+            &__img {
+                flex: none;
+                margin-right: 7px;
+            }
+            &__text {
+                color: #222222;
+                font-size: 15px;
+                font-weight: 500;
+            }
+        }
+    }
+}
+
+@include rm(1220) {
+    .header {
+        &__logo {
+            margin-right: 133px;
+            width: 186px;
+        }
+        .list {
+            &__img {
+                width: 40px;
+                margin-right: 15px;
+            }
+            &__text {
+                line-height: 1.3;
+            }
+        }
+    }
+}

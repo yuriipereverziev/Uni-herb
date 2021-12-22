@@ -1,0 +1,15 @@
+.block {
+  padding: 25px 0;
+  @include rm(480) {
+    padding: 30px 0;
+  }
+  @include rm(768) {
+    padding: 40px 0;
+  }
+  @include rm(1024) {
+    padding: 60px 0;
+  }
+  @include rm(1220) {
+    padding: 90px 0;
+  }
+}

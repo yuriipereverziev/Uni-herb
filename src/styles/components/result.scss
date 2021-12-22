@@ -1,0 +1,135 @@
+.result__title {
+  margin-bottom: 45px;
+}
+
+.result-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.result-wrapper:not(:last-of-type) {
+  margin-bottom: 45px;
+}
+
+.result__before__img,
+.result__after__img {
+  border-radius: 5px;
+  margin: 0 auto 5px;
+}
+
+.result__after {
+  position: relative;
+}
+
+.result__before {
+  position: relative;
+  margin-bottom: 45px;
+}
+
+.result__before__circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 62px;
+  height: 62px;
+  left: 50%;
+  top: -31px;
+  background-color: #fff;
+  border-radius: 50%;
+  border: 2px solid $red;
+  transform: translateX(-50%);
+}
+
+.result__before__circle::before,
+.result__before__circle::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 4px;
+  left: 16px;
+  border-radius: 2px;
+  background-color: #ff2525;
+  transform-origin: center center;
+}
+
+.result__before__circle::before {
+  transform: rotate(-45deg);
+}
+
+.result__before__circle::after {
+  transform: rotate(45deg);
+}
+
+.result__after__circle {
+  position: absolute;
+  width: 62px;
+  height: 62px;
+  background-color: $green;
+  background-image: url("../img/result-ok.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+  left: 50%;
+  top: -31px;
+  transform: translateX(-50%);
+}
+
+.result__after__text,
+.result__before__text {
+  text-align: center;
+  font-size: 16px;
+}
+
+@include rm(768) {
+  .result__title {
+    margin-bottom: 45px;
+  }
+
+  .result__before {
+    margin-right: 30px;
+    margin-bottom: 0;
+  }
+
+  .result-wrapper {
+    flex-direction: row;
+  }
+
+  .result-wrapper:not(:last-of-type) {
+    margin-bottom: 43px;
+  }
+
+
+  .result__after__text,
+  .result__before__text {
+    font-size: 18px;
+  }
+}
+
+@include rm(1024) {
+  .result__after__text,
+  .result__before__text {
+    font-size: 22px;
+  }
+
+  .result-wrapper:not(:last-of-type) {
+    margin-bottom: 63px;
+  }
+}
+
+@include rm(1220) {
+  .result__title {
+    margin-bottom: 73px;
+  }
+  .result__before__img,
+  .result__after__img {
+    margin-bottom: 20px;
+  }
+
+  .result__after__text,
+  .result__before__text {
+    font-size: 25px;
+  }
+}
+
+

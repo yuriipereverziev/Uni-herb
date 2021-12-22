@@ -1,0 +1,20 @@
+section.block.certificates
+  .container
+    h2.certificates-title.title Наши сертификаты
+
+    .certificates-wrapper
+      picture
+        source(media='(max-width:479px)' srcset='img/certificate1-mob.png')
+        source(srcset="img/certificate1.webp", type="image/webp")
+        img.certificates__img(src="img/certificate1.png" alt="product" loading="lazy")
+
+      picture
+        source(media='(max-width:479px)' srcset='img/certificate2-mob.png')
+        source(srcset="img/certificate2.webp", type="image/webp")
+        img.certificates__img(src="img/certificate2.png" alt="product" loading="lazy")
+
+      picture
+        source(media='(max-width:479px)' srcset='img/certificate3-mob.png')
+        source(srcset="img/certificate3.webp", type="image/webp")
+        img.certificates__img.certificates__img--last(src="img/certificate3.png" alt="product" loading="lazy")
+

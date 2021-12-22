@@ -1,0 +1,26 @@
+extends settings/layout
+
+prepend html
+  - const lang = "ru";
+
+prepend head
+  - const pageTitle = "Купить UNIHERB недорого. Цены, отзывы. Закажите UNIHERB сейчас!";
+  - const themeColor = "#ffffff";
+
+append head
+
+append content
+  include components/block-first
+  include components/section1
+  include components/advantages
+  include components/section2
+  include components/instruction
+  include components/section4
+  include components/certificates
+  include components/section3
+  include components/block-last
+  include components/popup
+  include components/banner
+
+append scripts
+  //- script(src="js/slick.min.js")

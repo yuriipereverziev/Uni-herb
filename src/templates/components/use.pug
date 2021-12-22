@@ -1,0 +1,62 @@
+mixin use-list (item)
+  .use__item
+    img.use__item__img(src=item.src alt="use-image" loading="lazy")
+    p.use__item__text.text-bold!= item.title
+
+-
+  const useArray = [
+    {
+      src: 'img/use1.png',
+      title: 'Обработка семян для стимуляции всхожести'
+    },
+    {
+      src: 'img/use2.png',
+      title: 'Предпосадочная обработка рассады для формирования иммунитета'
+    },
+    {
+      src: 'img/use3.png',
+      title: 'Обработка почвы перед посадкой для защиты от&nbsp;паразитов'
+    },
+    {
+      src: 'img/use4.png',
+      title: 'Обработка наземных частей растений для&nbsp;борьбы с&nbsp;вредителями'
+    }
+
+  ];
+.use__list
+  each item in useArray
+    +use-list(item)
+
+section.block.use
+  .container
+    h2.use__title.title Для чего вы можете
+      br
+      | использовать
+      span.text-pink Uni
+      span.text-green Herb
+      | ?
+    ul.use__list
+      //li.use__item
+      //  picture
+      //    source(srcset="img/use1.webp", type="image/webp")
+      //    img.use__item__img(src="img/use1.png" alt="use-image" loading="lazy")
+      //  p.use__item__text.text-bold Обработка семян для стимуляции всхожести
+      //li.use__item
+      //  picture
+      //    source(srcset="img/use2.webp", type="image/webp")
+      //    img.use__item__img(src="img/use2.png" alt="use-image" loading="lazy")
+      //  p.use__item__text.text-bold Предпосадочная обработка рассады для формирования иммунитета
+      //li.use__item
+      //  picture
+      //    source(srcset="img/use3.webp", type="image/webp")
+      //    img.use__item__img(src="img/use3.png" alt="use-image" loading="lazy")
+      //  p.use__item__text.text-bold Обработка почвы перед посадкой для защиты от&nbsp;паразитов
+      //li.use__item
+      //  picture
+      //    source(srcset="img/use4.webp", type="image/webp")
+      //    img.use__item__img(src="img/use4.png" alt="use-image" loading="lazy")
+      //  p.use__item__text.text-bold Обработка наземных частей растений для&nbsp;борьбы с&nbsp;вредителями
+      //
+      //
+
+

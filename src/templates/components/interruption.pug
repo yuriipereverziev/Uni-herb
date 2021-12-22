@@ -1,0 +1,30 @@
+section.interruption
+    .container
+        .interruption__img
+            picture
+                source(type="image/webp" srcset="img/prod-small.webp")
+                img(src="img/prod-small.png" alt="product" loading="lazy")
+        .interruption__content
+            h3.content__title.text-bold Внимание!
+            .content__info
+                .content__today
+                    span.today__text.text-bold Только сегодня
+                    span.date-0(data-format="dd month").today__date.text-bold 27 июля
+                .content__price
+                    span.price__text цена:
+                    span.x_price_current.price__num.text-bold 196
+                    span.x_currency.price__currency.text-bold руб
+                        | *
+                .content__timer
+                    span.timer__text До конца
+                        br
+                        | акции осталось:
+                    include timer
+        form.x_order_form.interruption__form(action="/submit", method="post")
+            .input-wrapper.input-wrapper--name
+                input(type="text" name="name" placeholder="Моё имя" required).input
+            .input-wrapper.input-wrapper--phone
+                input(type="tel" name="phone" placeholder="Мой телефон" required).input
+            .interruption__btn-wrapper
+                button(type="submit").button.interruption__btn.text-bold Заказать
+                p.form__order * При оформлении заказа

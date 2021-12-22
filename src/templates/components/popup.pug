@@ -1,0 +1,16 @@
+.ever-popup-build
+    #cloneThis.my-popup
+        .popup-wrap
+            .popup-left
+                h2.popup-title.text-bold
+                    span.text-pink UNI
+                    span.text-green HERB
+                h3.popup-subtitle.text-bold Органическая
+                    br
+                    | альтернатива пестицидам
+                .popup-product
+                    picture
+                        source( srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8/5+hHgAHggJ/PchI7wAAAABJRU5ErkJggg==" media="(max-width: 999px)")
+                        source(srcset="img/pack.webp", type="image/webp")
+                        img(src="img/pack.png", alt="product" loading="lazy")
+            include form

@@ -1,0 +1,56 @@
+.popup-left {
+    display: none;
+}
+.ever-popup__close:after, .ever-popup__close:before {
+    height: 3px!important;
+}
+@include rm(1000) {
+    .popup-wrap {
+        padding: 40px 55px;
+        border-radius: 5px;
+        background-size: cover;
+        background-position: -900px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .popup-left {
+        display: block;
+        margin-right: 55px;
+    }
+    .popup-product {
+        width: 395px;
+        position: relative;
+        &::before {
+            content: "";
+            position: absolute;
+            width: 100px;
+            height: 98px;
+            background-size: cover;
+            top: -55px;
+            right: 133px;
+            background-repeat: no-repeat;
+        }
+    }
+    .popup-title {
+        font-size: 62px;
+        margin-bottom: 30px;
+    }
+    .popup-subtitle {
+        font-size: 22px;
+        margin-bottom: 85px;
+        line-height: 1.3;
+    }
+    .no-webp .popup-wrap {
+        background-image: url(../img/advantages-bg.jpg);
+    }
+    .webp .popup-wrap {
+        background-image: url(../img/advantages-bg.webp);
+    }
+    .no-webp .popup-product::before {
+        background-image: url(../img/badge.png);
+    }
+    .webp .popup-product::before {
+        background-image: url(../img/badge.webp);
+    }
+} 

@@ -1,0 +1,71 @@
+.certificates {
+  background-image: linear-gradient(90deg,rgba(201,236,90,.697917) 0,#f5ffa2 53%,rgba(201,236,90,.608281) 100%);
+}
+
+.certificates-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+}
+
+.certificates__img {
+  max-width: 184px;
+  margin-bottom: 25px;
+}
+
+.certificates__img--last {
+  margin-bottom: 0;
+}
+
+
+@include rm(480) {
+  .certificates {
+    margin-top: 30px;
+    background-image: url("../img/vegetables-bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto;
+    background-position-x: -1000px;
+  }
+
+  .certificates-wrapper {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
+@include rm(640) {
+  .certificates__img {
+    margin-bottom: 0;
+  }
+}
+
+@include rm(768) {
+  .certificates {
+    margin-top: 40px;
+  }
+}
+
+@include rm(1024) {
+  .certificates__img {
+    max-width: 100%;
+  }
+  .certificates {
+    margin-top: 60px;
+  }
+}
+
+@include rm(1220) {
+
+  .certificates {
+    margin-top: 90px;
+    background-position-x: center;
+  }
+  .certificates-title {
+    margin-bottom: 55px;
+  }
+  .certificates__img {
+    max-width: 100%;
+  }
+}

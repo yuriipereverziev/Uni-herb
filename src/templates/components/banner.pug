@@ -1,0 +1,16 @@
+.banner
+    .container
+        picture
+            source(srcset="img/prod-extra-small.webp", type="image/webp")
+            img(src="img/prod-extra-small.jpg" alt="product" loading="lazy").banner__img
+        .banner__text.text-bold Только сегодня
+            br
+            span.form__date.banner__date.text-bold.date-0(data-format="dd month")
+            | цена:
+        .banner__price
+            .banner__price-num.x_price_current.text-bold 196
+            .banner__price-text.x_currency.text-bold руб*
+        .banner__timer
+            span.banner__timer-text До конца акции осталось:
+            include timer
+        .button.banner__btn.ever-popup-btn.text-bold Заказать

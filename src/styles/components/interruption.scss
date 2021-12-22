@@ -1,0 +1,360 @@
+.interruption {
+  &__btn-wrapper {
+    max-width: 250px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $light-green;
+    padding: 25px 10px;
+    margin: 0 auto;
+  }
+
+  &__content {
+    margin-bottom: 20px;
+  }
+
+  &__img {
+    margin-bottom: 20px;
+  }
+
+  .content {
+    &__title {
+      font-size: 28px;
+      text-transform: uppercase;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    &__price {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    &__today {
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    &__timer {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  .today {
+    &__text {
+      font-size: 18px;
+      font-weight: 500;
+    }
+
+    &__date {
+      background-color: $pink;
+      padding: 5px;
+      border-radius: 3px;
+      color: white;
+      font-size: 16px;
+      text-transform: lowercase;
+      display: inline-block;
+    }
+  }
+
+  .price {
+    &__text {
+      font-size: 16px;
+    }
+
+    &__num {
+      font-size: 26px;
+      padding: 0 5px;
+    }
+
+    &__currency {
+      font-size: 18px;
+    }
+  }
+
+  .timer {
+    width: 215px;
+
+    &__text {
+      margin: 0 auto 7px;
+      font-size: 16px;
+      font-weight: 500;
+      & br {
+          display: none;
+      }
+    }
+
+    &__dots {
+      color: #666666;
+      font-weight: 400;
+    }
+
+    &__hours,
+    &__minutes,
+    &__seconds {
+      display: flex;
+    }
+
+    & .hours,
+    & .seconds,
+    & .minutes {
+      display: inline-block;
+      padding: 5px 3px;
+      min-width: 27px;
+      width: 27px;
+      background-color: $green;
+      border-radius: 3px;
+      text-align: center;
+
+      &:first-child {
+        margin-right: 3px;
+      }
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__btn {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
+@include rm(480) {
+  .interruption {
+    .container {
+      border-radius: 5px;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 25px 10px;
+    }
+
+    .content__title {
+      font-size: 30px;
+    }
+
+    &__form {
+      order: 3;
+    }
+
+    &__content {
+      order: 1;
+      width: 100%;
+      justify-content: center;
+    }
+
+    &__img {
+      order: 2;
+      margin-right: 20px;
+    }
+
+    .price__num {
+      font-size: 30px;
+    }
+  }
+}
+
+@include rm(640) {
+  .interruption {
+    .container {
+      padding: 30px 10px;
+    }
+
+    &__title {
+      font-size: 32px;
+    }
+
+    .price__num {
+      font-size: 34px;
+    }
+  }
+}
+
+@include rm(768) {
+  .interruption {
+    .content__title {
+      font-size: 32px;
+    }
+
+    &__content {
+      width: 40%;
+      margin-bottom: 0px;
+    }
+
+    &__img {
+      margin-right: 30px;
+    }
+    .today__date {
+        font-size: 18px;
+    }
+    .price__text {
+        font-size: 18px;
+    }
+    .interruption .price__num {
+        font-size: 38px;
+    }
+  }
+}
+
+@include rm(1024) {
+  .interruption {
+      .container {
+          padding: 35px 15px;
+      }
+    .content__title {
+      text-align: left;
+      font-size: 36px;
+    }
+
+    &__img {
+      display: none;
+    }
+
+    &__content {
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+      position: relative;
+      padding-left: 180px;
+      &::before {
+        content: "";
+        position: absolute;
+        width: 115px;
+        height: 211px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        left: 22px;
+      }
+    }
+
+    .content {
+      &__info {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 15px;
+      }
+      &__today,
+      &__price {
+          margin-bottom: 0px;
+      }
+      &__today {
+          display: flex;
+          align-items: flex-end;
+      }
+      &__title {
+          margin-bottom: 10px;
+      }
+    }
+
+    &__form {
+      flex-direction: row;
+      padding-left: 180px;
+      width: 100%;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 12px;
+    }
+    .today {
+        &__date {
+            margin: 0 5px;
+            font-size: 20px;
+        }
+        &__text {
+            font-size: 20px;
+        }
+    }
+    .price {
+        &__text {
+            font-size: 20px;
+        }
+        &__num {
+            font-size: 42px;
+            padding: 0 8px
+        }
+        &__currency {
+            font-size: 22px;
+        }
+    }
+    &__btn {
+        padding: 14px 5px;
+    }
+  }
+}
+
+.no-webp .interruption__content::before {
+  background-image: url(../img/prod-small.png);
+}
+
+.webp .interruption__content::before {
+  background-image: url(../img/prod-small.webp);
+}
+
+@include rm(1220) {
+      .interruption {
+        .container {
+            padding: 60px 55px 40px;
+            max-width: 1170px
+        }
+        &__content {
+            padding-left: 143px;
+            &::before {
+                left: -11px;
+                top: -18px;
+            }
+        }
+        .content {
+            &__title {
+                font-size: 40px;
+                margin-bottom: 0px;
+            }
+            &__today {
+                align-items: center;
+            }
+            &__timer {
+                flex-direction: row;
+            }
+        }
+        &__form {
+            padding-left: 143px;
+            margin-bottom: 0px;
+        }
+        .price {
+            &__num {
+                font-size: 49px;
+            }
+        }
+        .timer__text {
+            margin: 0;
+            text-align: left;
+            margin-right: 15px;
+            & br {
+                display: block;
+            }
+        }
+        .content__price {
+            display: flex;
+            align-items: center;
+        }
+        .input-wrapper {
+            width: 290px;
+        }
+        &__btn-wrapper {
+            max-width: 290px;
+        }
+    }
+}

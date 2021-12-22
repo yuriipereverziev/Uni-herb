@@ -1,0 +1,22 @@
+form.x_order_form.form(action="/submit", method="post")
+    .form__header
+        span.header__text До конца акции осталось:
+        include timer
+    .form__body
+        .form__attention.text-bold Внимание!
+        .form__today Только сегодня 
+            span.date-0(data-format="dd month").form__date.text-bold 27 июля
+        .form__price
+            span.price__text цена:
+            span.x_price_current.price__num.text-bold 196
+            span.x_currency.price__currency.text-bold руб
+            span.price__star *
+        .input-wrapper.input-wrapper--name
+            input(type="text" name="name" placeholder="Моё имя" required).input
+        .input-wrapper.input-wrapper--phone
+            input(type="tel" name="phone" placeholder="Мой телефон" required).input
+        button(type="submit").button.form__btn.text-bold Заказать
+        p.form__order * При оформлении заказа
+    .form__footer Осталось
+        span.lastpack.form__lastpack.text-bold 80
+        | упаковок

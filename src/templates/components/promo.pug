@@ -1,0 +1,38 @@
+section.block.promo
+    .container
+        .promo__img
+            picture
+                source(type="image/webp" media="(max-width:479px)" srcset="img/pack-mob.webp")
+                source(media="(max-width:479px)" srcset="img/pack-mob.png" loading="lazy")
+                source(type="image/webp" srcset="img/pack.webp")
+                img(src="img/pack.png" alt="product" loading="lazy").promo__img-prod
+            picture
+                source( srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8/5+hHgAHggJ/PchI7wAAAABJRU5ErkJggg==" media="(max-width: 1023px)")
+                source(type="image/webp" srcset="img/promo__man.webp")
+                img(src="img/promo__man.png" alt="man" loading="lazy").promo__man
+        .promo__info
+            h2.promo__title.text-bold
+                span.text-pink UNI
+                span.text-green HERB
+            h3.promo__subtitle.text-bold Органическая
+                br
+                | альтернатива пестицидам
+            ul.promo__list
+                li.list__item
+                    .list__circle
+                    p.list__text Защищает растения от&nbsp;болезней
+                li.list__item
+                    .list__circle
+                    p.list__text Применяется для уничтожения более 400&nbsp;видов паразитов, вредителей и&nbsp;насекомых
+                li.list__item
+                    .list__circle
+                    p.list__text Безопасен для здоровья людей и&nbsp;животных
+        .promo__form
+            include form
+        .promo__footer
+            .footer__item
+                .footer__circle.footer__circle--test
+                p.footer__text Протестирован и&nbsp;сертифицирован
+            .footer__item
+                .footer__circle.footer__circle--fruit
+                p.footer__text Подходит для любых растений и&nbsp;овощей
